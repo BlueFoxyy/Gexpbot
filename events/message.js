@@ -47,7 +47,7 @@ module.exports = (client, message) => {
   }
   ***/
 
-  for (const perm of eval(`client.config.commands.${command}`).permissions)  {
+  for (const perm of eval(`client.cmdconfig.commands.${command}`).permissions)  {
     if (perm === "OWNER") {
       if (message.author.id != client.config.ownerID) {
         message.channel.send("You're not my master why are you ordering me?");
