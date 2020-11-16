@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     embed = new Discord.MessageEmbed().setTitle("Commands");
 
     if (!args || args.length === 0)
-      for (let module_name in client.config.modules) {
+      for (let module_name in client.cmdconfig.modules) {
         let mod = client.config.modules[module_name];
         let text = "";
         for (let i in mod) {
