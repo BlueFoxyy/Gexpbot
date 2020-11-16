@@ -1,0 +1,254 @@
+{
+	"token": "NjEzNjA4NzM4NTQ0NDE4ODI3.XZ4EPw.dYU6-VMU1LhU02wzyOVSJHpOrE4",
+	"ownerID": "480364364038406149",
+	"guildOwnerID": "480364364038406149",
+	"guildID": "588769495644897298",
+	"hypixelGuildID": "5a16eb970cf2c642769b0b68",
+	"logChannelID": "667162874677952532",
+	"verifyLogChannelID": "674980521079472158",
+	"base_dir": "C:/Users/user/Desktop/Discord Bots/GexpBot",
+	"apiKeys": {
+		"hypixel": "3c2a5406-3f97-4a85-811d-7c686183837b",
+		"youtube": "AIzaSyAVd_d2L3QkfQxbpO6WyS779dzaRQ4sSss"
+	},
+  "commands": {
+		"awoo":{
+			"arguments": [],
+			"description": "*AWOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*\nPings Foxyy in DMs\n***__NO ABUZ__***",
+			"permissions": [],
+			"alternatives": [
+        {
+          "arguments": ["[@user]"],
+          "description": "*AWOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*\nPings `@user` in DMs\n***__NO ABUZ__***"
+        }
+			]
+		},
+		"config":{
+			"arguments": [],
+			"description": "Configures bot settings, can be checked with `info`",
+			"permissions": ["MANAGE_ROLES"],
+			"alternatives": [
+				{
+					"arguments": ["prefix", "[prefix]"],
+					"description": "Set the prefix"
+				},
+				{
+					"arguments": ["tiers", "{add [role] [gexp amount]} / {remove [role]}"],
+					"description": "Configures the tiers"
+				},
+				{
+					"arguments": ["[category]", "[type]", "[value]"],
+					"description": "Configures anything else than `tiers` and `prefix`\nExample:`config channels autopost <channel_id>`"
+				}
+			]
+		},
+		"help":{
+			"arguments": [],
+			"description": "Shows all available commands & modules",
+			"permissions": [],
+      "alternatives": [
+        {
+          "arguments": ["[command_name]"],
+          "description": "Shows the the help message for the specified `command_name`"
+        },
+				{
+					"arguments": ["[module]"],
+					"description": "Shows all the available commands in the specified `module`"
+				}
+      ]
+		},
+		"ping":{
+			"arguments": [],
+			"description": "Checks if the bot is there or down",
+			"permissions": [],
+      "alternatives": []
+		},
+		"reload":{
+      "arguments": [],
+      "description": "Reloads all commands",
+			"permissions": ["OWNER"],
+      "alternatives": [
+        {
+          "arguments": ["[command_name]"],
+    			"description": "Reloads the specified `command_name`"
+        }
+      ]
+		},
+    "restart":{
+			"arguments": [],
+			"description": "Restarts the bot, what else can it be?",
+			"permissions": ["OWNER"],
+      "alternatives": []
+		},
+		"info":{
+      "arguments": [""],
+      "description": "Displays bot's settings.",
+			"permissions": [],
+			"alternatives": []
+		},
+		"updatetier":{
+      "arguments": [],
+      "description": "Updates the tiers?...",
+			"permissions": ["MANAGE_ROLES"],
+			"alternatives": []
+		},
+		"leaderboard":{
+      "arguments": [],
+      "description": "Displays the info of top guilds",
+			"permissions": [],
+			"alternatives": []
+		},
+		"forceverify":{
+    	"arguments": ["[@user]", "[ign]"],
+			"description": "Verifies the @user, roles given whether guest/member automatically.",
+			"permissions": ["MANAGE_ROLES","MANAGE_NICKNAMES"],
+      "alternatives": []
+		},
+		"verify":{
+				"arguments": ["[ign]"],
+				"description": "Verifies yourself **Must have discord connected on Hypixel.**",
+				"permissions": [],
+				"alternatives": []
+		},
+		"gexp":{
+			"arguments": [],
+			"description": "Displays your own guild-experience history.",
+			"permissions": [],
+      "alternatives": [{
+				"arguments": ["[ign]"],
+				"description": "Displays the guild-experience history for the specified `ign`."
+			}]
+		},
+		"ginvite":{
+			"arguments": ["add", "[ign]"],
+			"description": "Adds `ign` to the invitation queue.",
+			"permissions": ["MANAGE_ROLES"],
+      "alternatives": [
+				{
+					"arguments": ["remove", "[ign]"],
+					"description": "Removes `ign` from the invitation queue."
+				},
+				{
+					"arguments": ["list"],
+					"description": "Lists all people in the invitation queue."
+				}
+			]
+		},
+		"eval":{
+			"arguments": ["[script]"],
+			"description": "Evaluates the `script`, I'm sorry but no one is permitted to use this command.",
+			"permissions": ["OWNER"],
+      "alternatives": []
+		},
+		"blacklist":{
+			"arguments": ["add","[ign]","[optional|reason]"],
+			"description": "Bans a member from the guild.",
+			"permissions": ["KICK_MEMBERS"],
+      "alternatives": [{
+				"arguments": ["remove","[ign]"],
+				"description": "Pardons an user from the guild."
+			}]
+		},
+		"whitelist":{
+			"arguments": ["add","[ign]"],
+			"description": "Adds a member to the whitelist.",
+			"permissions": ["KICK_MEMBERS"],
+      "alternatives": [{
+				"arguments": ["remove","[ign]"],
+				"description": "Removes a member from the whitelist."
+			}]
+		},
+		"comp":{
+			"arguments": [],
+			"description": "Displays the top 10 players in December's competition.",
+			"permissions": [],
+      "alternatives": []
+		},
+		"join":{
+			"arguments": [],
+			"description": "Summons me in your voice channel",
+			"permissions": [],
+			"alternatives": []
+		},
+		"leave":{
+			"arguments": [],
+			"description": "Makes me leave your voice channel",
+			"permissions": [],
+			"alternatives": []
+		},
+		"play":{
+			"arguments": ["[url]"],
+			"description": "Adds a song by it's url to the end of the queue",
+			"permissions": [],
+			"alternatives": [{
+				"arguments": ["[song]"],
+				"description": "Adds a song by seraching on various websites"
+			}]
+		},
+		"stop":{
+			"arguments": [],
+			"description": "Makes me stop playing as well as clear the queue",
+			"permissions": [],
+			"alternatives": []
+		},
+		"queue":{
+			"arguments": [],
+			"description": "Shows the songs in the queue",
+			"permissions": [],
+			"alternatives": []
+		},
+		"pause": {
+			"arguments": [],
+			"description": "Pauses the player",
+			"permissions": [],
+			"alternatives": []
+		},
+		"unpause": {
+			"arguments": [],
+			"description": "Unpauses the player if paused",
+			"permissions": [],
+			"alternatives": []
+		},
+		"loop": {
+			"arguments": ["[off/queue/track]"],
+			"description": "Sets the loop type or turn it off",
+			"permissions": [],
+			"alternatives": []
+		},
+		"clear": {
+			"arguments": [],
+			"description": "Clears the queue",
+			"permissions": [],
+			"alternatives": []
+		},
+		"skip": {
+			"arguments": [],
+			"description": "Skips the current track",
+			"permissions": [],
+			"alternatives": [{
+				"arguments": ["[track id]"],
+				"description": "Skips the track by it's id"
+			}]
+		},
+		"shuffle": {
+			"arguments": [],
+			"description": "Shuffles the queue",
+			"permissions": [],
+			"alternatives": []
+		},
+		"gtop": {
+			"arguments": [],
+			"description": "Displays today's gexp leaderboard",
+			"permissions": [],
+			"alternatives": [{
+				"arguments": ["weekly"],
+				"description": "Displays this week's gexp leaderboard"
+			}]
+		}
+	},
+	"modules": {"statistics":["comp","leaderboard","gexp","gtop"],
+							"utilities":["awoo","help","ping","info"],
+							"music":["join","leave","play","stop","pause","unpause","queue","loop","clear","shuffle","skip"],
+							"moderation":["verify","ginvite","blacklist","whitelist","config"],
+							"maintenancetools":["eval","restart","reload"]}
+}
