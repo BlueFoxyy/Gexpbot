@@ -9,7 +9,7 @@ const axios = require("axios");
 const MinecraftApi = require("minecraft-api");
 
 const client = new Discord.Client();
-client.apiconfig = require("./configs/config.json")
+client.apiconfig = require("./configs/apiconfig.json")
 client.config = require("./configs/config.json");
 client.cmdconfig = require("./configs/cmdconfig.json")
 dbconfig = require(`./configs/dbconfig.json`);
