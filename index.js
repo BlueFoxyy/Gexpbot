@@ -438,4 +438,4 @@ schedule.scheduleJob("0 0 * * *", async() => {
   }
 });
 
-client.login(config.token);
+client.login(client.config.token);
