@@ -6,8 +6,9 @@ exports.run = (client, message, args) => {
       // We also need to delete and reload the command from the client.commands Enmap
       client.commands.delete(commandName);
     });
-    delete require.cache[require.resolve("../config.json")];
-    delete require.cache[require.resolve("../dbconfig.json")];
+    delete require.cache[require.resolve("../configs/config.json")];
+    delete require.cache[require.resolve("../configs/dbconfig.json")];
+    delete require.cache[require.resolve("../configs/cmdconfig.json")];
     fs = require('fs');
     fs.readdir("./commands/", (err, files) => {
       if (err) return console.error(err);
@@ -39,5 +40,5 @@ exports.run = (client, message, args) => {
     const props = require(`./${commandName}.js`);
     client.commands.set(commandName, props);
     message.reply(`The command ${commandName} has been reloaded`);
-}
+ }
 };
