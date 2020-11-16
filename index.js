@@ -9,6 +9,7 @@ const axios = require("axios");
 const MinecraftApi = require("minecraft-api");
 
 const client = new Discord.Client();
+client.apiconfig = require("./configs/config.json")
 client.config = require("./configs/config.json");
 client.cmdconfig = require("./configs/cmdconfig.json")
 dbconfig = require(`./configs/dbconfig.json`);
@@ -91,7 +92,7 @@ queueConstruct = {
 
 client.queueConstruct = queueConstruct;
 
-client.Hypixel_client = new Hypixel({ key: client.config.apiKeys.hypixel });
+client.Hypixel_client = new Hypixel({ key: client.apiconfig.apiKeys.hypixel });
 
 // update tier every hour
 function removeFromArray (array, item) {
@@ -438,4 +439,4 @@ schedule.scheduleJob("0 0 * * *", async() => {
   }
 });
 
-client.login(client.config.token);
+client.login(client.apiconfig.token);
