@@ -19,10 +19,12 @@ exports.run = (client, message, args) => {
         client.commands.set(commandName, props);
       });
     });
-    const config = require('../config.json');
+    const config = require('../configs/config.json');
     client.config = config;
-    const dbconfig = require('../dbconfig.json');
+    const dbconfig = require('../configs/dbconfig.json');
     client.dbconfig = dbconfig;
+    client.apiconfig = require('../configs/apiconfig.json');
+    client.cmdconfig = require('../configs/cmdconfig.json');
     message.reply(`All commands and configuration has been reloaded!`);
   } else {
     const commandName = args[0];
