@@ -9,10 +9,9 @@ const axios = require("axios");
 const MinecraftApi = require("minecraft-api");
 
 const client = new Discord.Client();
-const config = require("./config.json");
-// We also need to make sure we're attaching the config to the CLIENT so it's accessible everywhere!
-client.config = config;
-dbconfig = require(`./dbconfig.json`);
+client.config = require("./configs/config.json");
+client.cmdconfig = require("./configs/cmdconfig.json")
+dbconfig = require(`./configs/dbconfig.json`);
 client.dbconnection = mysql.createPool({
   host     : dbconfig.host,
   user     : dbconfig.user,
@@ -92,7 +91,7 @@ queueConstruct = {
 
 client.queueConstruct = queueConstruct;
 
-client.Hypixel_client = new Hypixel({ key: config.apiKeys.hypixel });
+client.Hypixel_client = new Hypixel({ key: client.config.apiKeys.hypixel });
 
 // update tier every hour
 function removeFromArray (array, item) {
